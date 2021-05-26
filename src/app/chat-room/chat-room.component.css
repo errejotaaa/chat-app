@@ -24,6 +24,10 @@
   margin-top: 65px;
   flex: 1.5;
   background-color: rgb(80, 85, 105);
+  background: url("https://t4.ftcdn.net/jpg/03/61/78/41/360_F_361784107_17veJcYF9ATUdriUEpbK45ImBU20GG38.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 @media screen and (max-width: 767px) {
   .userListWrapper {

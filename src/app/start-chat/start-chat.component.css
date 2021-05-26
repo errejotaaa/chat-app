@@ -4,6 +4,9 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  background: url("https://i.pinimg.com/originals/52/ec/bb/52ecbb1273c5d9b78b7a07863fe63234.jpg")
+    no-repeat;
+  background-position: left;
 }
 
 .header {
@@ -11,7 +14,7 @@
 
   font-size: 40px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 40px;
   padding: 15px;
 }

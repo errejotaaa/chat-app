@@ -30,6 +30,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         const status = 'online';
+        this.user = auth.user;
         this.setUserStatus(status);
         this.router.navigate(['/chat']);
       })
@@ -66,6 +67,7 @@ export class AuthService {
 
   setUserStatus(status: string) {
     const path = `user/${this.currentUserId}`;
+    console.log('PATH', path);
     const data = {
       status: status,
     };

@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url("https://i.pinimg.com/originals/52/ec/bb/52ecbb1273c5d9b78b7a07863fe63234.jpg");
+  background-position: bottom;
 }
 
 .loginCard {

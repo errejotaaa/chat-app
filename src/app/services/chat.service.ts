@@ -105,7 +105,6 @@ export class ChatService {
                               receiverId === a.senderId)
                         )
                         .map((a) => {
-                          console.log(sender.uid);
                           if (sender.uid === a.senderId) {
                             a.username = sender.displayName;
                           } else {
