@@ -34,7 +34,7 @@ export class AuthService {
         this.router.navigate(['/chat']);
       })
       .catch((error) => {
-        console.log('DESDE LOGIN ' + error);
+        alert('Error. ' + error.message);
       });
   }
 
@@ -47,7 +47,7 @@ export class AuthService {
         this.setUserData(email, displayName, status);
       })
       .catch((error) => {
-        console.log(error);
+        alert('Error. ' + error.message);
       });
   }
 

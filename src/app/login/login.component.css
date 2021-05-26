@@ -35,6 +35,13 @@
   border: 1px solid rgb(182, 181, 181);
   border-radius: 4px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 button {
   border: none;
@@ -52,4 +59,8 @@ button:hover {
 
 button:active {
   background-color: rgb(26, 26, 221);
+}
+
+button:disabled {
+  background-color: rgb(80, 80, 241);
 }
