@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="loginCard">
+    <h2 class="heading">Sign In</h2>
+    <input
+      [(ngModel)]="email"
+      type="email"
+      name="email"
+      class="formInput"
+      placeholder="Email"
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      class="formInput"
+      placeholder="Password"
+    />
+    <button class="btn" id="btn-login" (click)="login()">Sign In</button>
+  </div>
+</div>

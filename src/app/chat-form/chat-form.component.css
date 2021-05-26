@@ -1,0 +1,47 @@
+.inputGroup {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div input {
+  width: 85%;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.5) 0px -1px 3px 0px;
+  opacity: 0.8;
+}
+div input:focus {
+  outline: none;
+}
+
+div button {
+  outline: none;
+  box-sizing: border-box;
+  width: 15%;
+  border: none;
+  background-color: rgb(26, 26, 221);
+  color: white;
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+div button {
+  padding-top: 3px;
+}
+
+div button:hover {
+  background-color: rgb(9, 9, 150);
+  color: white;
+}

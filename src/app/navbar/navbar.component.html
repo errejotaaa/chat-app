@@ -1,0 +1,20 @@
+<div class="navBar">
+  <div id="heading"><a routerLink="/">AngularChat</a></div>
+  <div id="heading-mobile" (click)="toggleSlide()">
+    <mat-icon>menu</mat-icon>
+  </div>
+  <div class="links">
+    <div routerLinkActive="active" *ngIf="!userId">
+      <a routerLink="/login">Login</a>
+    </div>
+    <div routerLinkActive="active" *ngIf="!userId">
+      <a routerLink="/signup">Sign Up</a>
+    </div>
+    <div *ngIf="userId">
+      <span id="profile"><a routerLink="chat/profile">Profile</a></span>
+    </div>
+    <div *ngIf="userId">
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+</div>

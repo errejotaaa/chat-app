@@ -1,0 +1,7 @@
+.chatHeaderWrapper {
+  width: 100%;
+}
+.chatRoom {
+  height: 100vh;
+  box-sizing: border-box;
+}

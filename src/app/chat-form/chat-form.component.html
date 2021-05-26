@@ -1,0 +1,13 @@
+<div class="inputGroup">
+  <input
+    class="chatInput"
+    [(ngModel)]="message"
+    (keydown)="handleSubmit($event)"
+  />
+
+  <button class="chatButton" (click)="send()">
+    <span>
+      <mat-icon>send</mat-icon>
+    </span>
+  </button>
+</div>

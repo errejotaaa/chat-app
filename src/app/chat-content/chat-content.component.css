@@ -1,0 +1,15 @@
+.feedWrapper {
+  height: 90%;
+  overflow-y: scroll;
+}
+.chatFormWrapper {
+  height: 10%;
+}
+@media screen and (max-width: 767px) {
+  .feedWrapper {
+    height: 92%;
+  }
+  .chatFormWrapper {
+    height: 8%;
+  }
+}

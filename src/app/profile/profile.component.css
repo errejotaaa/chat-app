@@ -1,0 +1,60 @@
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 200px;
+  margin: 0 15px;
+  box-shadow: rgba(17, 17, 26, 0.644) 0px 2px 2px;
+  background-color: rgb(235, 246, 255);
+  padding: 0 30px;
+  border-radius: 10px;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(54, 54, 54);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  border: 1px solid rgb(182, 181, 181);
+  border-radius: 4px;
+}
+button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(26, 26, 221);
+  color: white;
+  padding: 15px 25px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(9, 9, 150);
+}
+
+button:active {
+  background-color: rgb(26, 26, 221);
+}

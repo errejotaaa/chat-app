@@ -1,0 +1,11 @@
+<div class="mainContent">
+  <div class="userListWrapper">
+    <app-user-list></app-user-list>
+  </div>
+  <div [@slideState]="state" class="userListWrapperMobile">
+    <app-user-list></app-user-list>
+  </div>
+  <div class="chatContent">
+    <router-outlet></router-outlet>
+  </div>
+</div>

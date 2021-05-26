@@ -1,0 +1,75 @@
+.container {
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(119, 228, 255), rgb(101, 47, 250));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupCard {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 390px;
+  border-radius: 10px;
+  justify-content: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 15px;
+  align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.644) 0px 2px 2px;
+  background-color: rgb(235, 246, 255);
+}
+
+form .heading {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(54, 54, 54);
+}
+
+form label {
+  color: rgb(54, 54, 54);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.signupCard input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 7px;
+  border: 1px solid rgb(182, 181, 181);
+  border-radius: 4px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(26, 26, 221);
+  color: white;
+  padding: 15px 25px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(9, 9, 150);
+}
+
+button:active {
+  background-color: rgb(26, 26, 221);
+}

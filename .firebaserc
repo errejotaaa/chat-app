@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chat-app-127fa": {
+      "hosting": {
+        "chat-app": [
+          "chat-app-127fa"
+        ]
+      }
+    }
+  }
+}
