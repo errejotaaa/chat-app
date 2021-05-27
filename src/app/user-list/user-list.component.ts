@@ -24,7 +24,6 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.chatService.getUsers().subscribe((users) => {
       this.users = users.filter((user) => user.email != this.user.email);
-      console.log(this.users);
     });
   }
 }

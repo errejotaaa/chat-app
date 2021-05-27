@@ -13,8 +13,4 @@ export class UserItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  getPrivateMessages(uid: string) {
-    console.log(uid + ' private messages');
-  }
 }

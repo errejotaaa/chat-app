@@ -1,8 +1,6 @@
 <div class="userItem">
   <span class="status" [ngClass]="user.status"> </span>
   <span class="userName">
-    <a [routerLink]="[user.uid]" (click)="getPrivateMessages(user.uid)">{{
-      user.displayName
-    }}</a>
+    <a [routerLink]="[user.uid]">{{ user.displayName }}</a>
   </span>
 </div>

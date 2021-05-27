@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .card {
@@ -57,4 +56,10 @@ button:hover {
 
 button:active {
   background-color: rgb(26, 26, 221);
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
 }

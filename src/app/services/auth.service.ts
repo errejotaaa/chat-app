@@ -67,7 +67,6 @@ export class AuthService {
 
   setUserStatus(status: string) {
     const path = `user/${this.currentUserId}`;
-    console.log('PATH', path);
     const data = {
       status: status,
     };
