@@ -1,6 +1,5 @@
+import { map } from 'rxjs/operators';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { ChatService } from './services/chat.service';
-import { AuthService } from './services/auth.service';
 import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
@@ -10,13 +9,11 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import firebase from 'firebase/app';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class Auth2Guard implements CanActivate {
   constructor(private afAuth: AngularFireAuth, private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -28,9 +25,9 @@ export class AuthGuard implements CanActivate {
     | UrlTree {
     return this.afAuth.authState.pipe(
       map((user) => {
-        const isAuth = user !== null ? true : false;
+        const isAuth = user !== null ? false : true;
         if (!isAuth) {
-          this.router.navigate(['/']);
+          this.router.navigate(['/chat']);
         }
         return isAuth;
       })

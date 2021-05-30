@@ -1,3 +1,4 @@
+import { Auth2Guard } from './auth2.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.guard';
 import { StartChatComponent } from './start-chat/start-chat.component';
@@ -9,8 +10,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent, canActivate: [Auth2Guard] },
+  { path: 'login', component: LoginComponent, canActivate: [Auth2Guard] },
   {
     path: 'chat',
     component: ChatRoomComponent,
