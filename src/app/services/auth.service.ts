@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/app';
 import { AngularFireDatabase } from '@angular/fire/database';
@@ -31,7 +30,7 @@ export class AuthService {
       .then((auth) => {
         const status = 'online';
         this.user = auth.user;
-        this.setUserStatus(status);
+        this.setUserStatus(status, auth.user.uid);
         this.router.navigate(['/chat']);
       })
       .catch((error) => {
@@ -42,18 +41,17 @@ export class AuthService {
   signup(email: string, password: string, displayName: string) {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
-      .then((user) => {
-        const status = 'offline';
-        this.authState = user;
-        this.setUserData(email, displayName, status);
+      .then((auth) => {
+        const status = 'online';
+        this.setUserData(email, displayName, status, auth.user.uid);
       })
       .catch((error) => {
         alert('Error. ' + error.message);
       });
   }
 
-  setUserData(email: string, displayName: string, status: string): void {
-    const path = `user/${this.currentUserId}`;
+  setUserData(email: string, displayName: string, status: string, id): void {
+    const path = `user/${id}`;
     const data = {
       email: email,
       displayName: displayName,
@@ -65,8 +63,8 @@ export class AuthService {
       .catch((error) => console.log(error));
   }
 
-  setUserStatus(status: string) {
-    const path = `user/${this.currentUserId}`;
+  setUserStatus(status: string, id) {
+    const path = `user/${id}`;
     const data = {
       status: status,
     };
@@ -93,7 +91,7 @@ export class AuthService {
 
   logout() {
     const status = 'offline';
-    this.setUserStatus(status);
+    this.setUserStatus(status, this.currentUserId);
     this.afAuth.signOut().then(() => {
       this.router.navigate(['/login']);
     });
